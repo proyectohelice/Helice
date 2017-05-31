@@ -4,7 +4,11 @@
 import requests
 from bs4 import BeautifulSoup
 
+<<<<<<< HEAD
 url = 'http://apolinav'# Direccion de la pagina web.
+=======
+url = 'http://www.apolinav.cl'# Direccion de la pagina web.
+>>>>>>> 30cdf4d844e224feb68734916ceb790edc9d945e
 
 #Peticion a la pagina web.
 
@@ -34,7 +38,7 @@ if status_code == 200:
 		print "%d - %s | %s | %s" % (i+1,titulo,autor,fecha)
 else:
 	print "Status Code %d" % status_code
-
+#pizarro terrible pollo
 
 
 

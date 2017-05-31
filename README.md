@@ -1,11 +1,29 @@
+# Abstract
+
+This program takes automatic information from particular web pag.
+The objective of this work is to apply the concepts learned in the software Engineering class.
+
+# Requirements
+
+The following libraries are required to run this program:
+
+* Python 3
+
+* BeautifulSoup4
+
+* requests
 
 # Team Work
-1. nickname: ivanpizarro.
+------------------------------------
+* nickname: ivanpizarro.
 * user: Ivan Pizarro Quezada.
-2. nickname: nachoandres.
+------------------------------------
+* nickname: nachoandres.
 * user: Ignacio Delgadillo Vera.
-3. nickname: falaNgEcL
+------------------------------------ 
+* nickname: falaNgEcL
 * user: José Hernández Brito.
+------------------------------------
 # Class
 
 Software Enginnering
@@ -14,16 +32,6 @@ Software Enginnering
 
 Helice
 
-# Abstract
 
-This program takes informationsautomatic information from particular web pag.
-The objective of this work is to apply the concepts learned in the software Engineering class.
-
-# Requirements
-
-The following libraries are required to run this program.
-
-* BeautifulSoup4
-* requests
 
 
