@@ -33,7 +33,7 @@ if status_code == 200:
 		print "%d - %s | %s | %s" % (i+1,titulo,autor,fecha)
 else:
 	print "Status Code %d" % status_code
-
+#pizarro terrible pollo
 
 
 
