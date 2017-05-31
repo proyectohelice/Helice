@@ -1,9 +1,10 @@
 
+#probando desde el terminal.
 
 import requests
 from bs4 import BeautifulSoup
 
-url = 'http://jarroba.com'# Direccion de la pagina web.
+url = 'http://apolinav'# Direccion de la pagina web.
 
 #Peticion a la pagina web.
 
