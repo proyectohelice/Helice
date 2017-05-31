@@ -12,16 +12,16 @@ The following libraries are required to run this program:
 * requests
 
 # Team Work
-1-
+------------------------------------
 * nickname: ivanpizarro.
 * user: Ivan Pizarro Quezada.
-2-
+------------------------------------
 * nickname: nachoandres.
 * user: Ignacio Delgadillo Vera.
-3- 
+------------------------------------ 
 * nickname: falaNgEcL
 * user: José Hernández Brito.
-
+------------------------------------
 # Class
 
 Software Enginnering
