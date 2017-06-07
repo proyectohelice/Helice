@@ -4,41 +4,26 @@
 import requests
 from bs4 import BeautifulSoup
 
-<<<<<<< HEAD
-url = 'http://apolinav'# Direccion de la pagina web.
-=======
-url = 'http://www.apolinav.cl'# Direccion de la pagina web.
->>>>>>> 30cdf4d844e224feb68734916ceb790edc9d945e
 
-#Peticion a la pagina web.
 
-req = requests.get(url)
+# Capturamos la url ingresada en la variable "url"
+url = 'http://www.weplay.cl'
+ 
+# Capturamos el hml de la pagina web y creamos un objeto Response
+r  = requests.get(url)
+data = r.text
 
-# comprobacion de peticion aceptada
+ 
+# Creamos el objeto soup y le pasamos lo capturado con request
+soup = BeautifulSoup(data, 'lxml')
 
-status_code = req.status_code
+#Buscar en la pag todos las clases prod.
+articulos = soup.find_all('div', class_="prod")
+nombre = soup.find_all('div', class_="nom_prod")
+precio = soup.find_all('div', class_="prec_prod")
 
-if status_code == 200:
-	
-	#pasamos el contenido HTML de la web a un objeto Bs4()
-	html = BeautifulSoup(req.text,"html.parser")
-
-	#Obtecion de todos los divs donde estan las entradas
-	entradas = html.find_all('div',{'class': 'col-md-4 col-cs-12'})
-
-	#recorremos las entradas para extraer el titulo, autor y fecha
-	for i, entrada in enumerate(entradas):
-		#con el metodo "getText()" no nos devuelve el HTML
-		titulo= entrada.find('span',{'class':'tituloPost'}).getText()
-		#sino llamaos al metodo "getText()" nos devuelve tambien el HTML
-		autor = entrada.find('span',{'class':'autor'})
-		fecha = entrada.find('span',{'class':'fecha'}).getText()
-
-		#imprimir titulo, autor y fecha de entradas
-		print "%d - %s | %s | %s" % (i+1,titulo,autor,fecha)
-else:
-	print "Status Code %d" % status_code
-#pizarro terrible pollo
+print(nombre[1].text)
+print(precio[1].text)
 
 
 
