@@ -7,7 +7,7 @@ The objective of this work is to apply the concepts learned in the software Engi
 
 The following programs and libraries are required to run this program:
 
-* Python 3 
+* Python3 
 
 * pip3 - install on mac: sudo easy_install pip3
 
