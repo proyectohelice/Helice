@@ -3,6 +3,11 @@
 
 import requests
 from bs4 import BeautifulSoup
+import lxml
+
+
+#############################################################
+########### OBTENCION DE INFORMACION ########################
 
 
 
@@ -22,9 +27,22 @@ articulos = soup.find_all('div', class_="prod")
 nombre = soup.find_all('div', class_="nom_prod")
 precio = soup.find_all('div', class_="prec_prod")
 
+#############################################################
 
-print(nombre[1].text)
-print(precio[1].text)
+#############################################################
+########## PROCESAMIENTO DE LA INFORMACION #################
+
+
+for i in range(0,6):
+	print("--------------------------------------")
+	print('numero:',i)
+	print('-','nombre:', nombre[i].text)
+	print('-','precio:',precio[i].text)
+
+
+
+
+
 
 
 
