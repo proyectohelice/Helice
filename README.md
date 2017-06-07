@@ -17,6 +17,8 @@ The following programs and libraries are required to run this program:
 
 * xlml - install on mac: pip3 install xlml
 
+* Install lxml parser , pip3 install lxml
+
 # Team Work
 ------------------------------------
 * nickname: ivanpizarro.
