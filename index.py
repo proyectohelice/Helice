@@ -48,7 +48,6 @@ else:
 	print "Status Code %d" % status_code
 
 # comentario de prueba
->>>>>>> 25d96e54fdca207bdaa12d141c4a31d05a5e809f
 
 
 
