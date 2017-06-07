@@ -13,6 +13,8 @@ The following libraries are required to run this program:
 
 * requests
 
+* Install lxml parser , pip3 install lxml
+
 # Team Work
 ------------------------------------
 * nickname: ivanpizarro.
