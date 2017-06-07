@@ -5,13 +5,17 @@ The objective of this work is to apply the concepts learned in the software Engi
 
 # Requirements
 
-The following libraries are required to run this program:
+The following programs and libraries are required to run this program:
 
-* Python 3
+* Python 3 
 
-* BeautifulSoup4
+* pip3 - install on mac: sudo easy_install pip3
 
-* requests
+* BeautifulSoup4 - install  on mac: pip3 install BeautifulSoup4
+
+* requests -  install on mac: pip3 install requests
+
+* xlml - install on mac: pip3 install xlml
 
 # Team Work
 ------------------------------------
