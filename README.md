@@ -21,6 +21,13 @@ The following programs and libraries are required to run this program:
 
 * calendar - install on mac: pip3 install calendar
 
+* xlwt - install on mac: pip3 install xlwt
+
+* xlrd - install on mac: pip3 install xlrd
+
+* xlutils - install on mac: pip3 install xlutils
+
+
 # Team Work
 ------------------------------------
 * nickname: ivanpizarro.
