@@ -36,38 +36,47 @@ consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 
 if consola == '1': # si consola = 1 se elije consola xbox one
 	url= "http://www.weplay.cl/resultado/juegos+xbox+one/1/creacion_mayor/"  #Url de juegos Xbox one.
+	name='xbox one'
 
 elif consola == '2':
 
 	url="http://www.weplay.cl/resultado/juegos+ps4/1/creacion_mayor/" #Url de juegos play station 4.
+	name="play station 4"
 
 elif consola == '3':
 
 	url="http://www.weplay.cl/resultado/juegos+xbox+360/1/creacion_mayor/" #Url de juegos xbox 360.
+	name="xbox 360"
 
 elif consola == '4':
 
 	url="http://www.weplay.cl/resultado/juegos+wii/1/creacion_mayor/" #Url de juegos wii.
+	name="Wii"
 
 elif consola == '5':
 
 	url="http://www.weplay.cl/resultado/juegos+switch/1/creacion_mayor/" #Url de juegos switch.
+	name="Nintendo Switch"
 
 elif consola == '6':
 
 	url="http://www.weplay.cl/resultado/juegos+3ds/1/creacion_mayor/" #Url de juegos 3ds.
+	name="Nintendo 3ds"
 
 elif consola == '7':
 
-	url="http://www.weplay.cl/resultado/juegos+ps+vita/1/creacion_mayor/" #Url de juegos pc.
+	url="http://www.weplay.cl/resultado/juegos+ps+vita/1/creacion_mayor/" #Url de juegos vita.
+	name="PS vita"
 
 elif consola == '8':
 
 	url="http://www.weplay.cl/resultado/juegos+pc/1/creacion_mayor/" #Url de juegos pc.
+	name="PC"
 
 elif consola == '9':
 
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
+	name="Ofertas"
 else:
 	print("\x1b[6;30;42m"+"\n\n\n############################\nERROR: Los numeros van entre 1-9\n############################\n\n\n"+"\x1b[0m")
 
@@ -103,7 +112,7 @@ precio = soup.find_all('div', class_="prec_prod_b")
 
 estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
 wb = xlwt.Workbook()
-pestana = wb.add_sheet('PS4',cell_overwrite_ok=True) #Crea pestana
+pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana
 pestana.write(0, 0, '                       NOMBRE', estilo)
 pestana.write(0, 1, '                       PRECIO', estilo)
 
