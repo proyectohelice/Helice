@@ -78,7 +78,7 @@ elif consola == '9':
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
 	name="Ofertas"
 else:
-	print("\x1b[6;30;42m"+"\n\n\n############################\nERROR: Los numeros van entre 1-9\n############################\n\n\n"+"\x1b[0m")
+	print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" Numero ingresado no encontrado\n############################\n\n\n") 
 
 
 
@@ -92,7 +92,9 @@ data = r.text
 soup = BeautifulSoup(data, 'lxml')
 
 #Buscar en la pag todos las clases que contienen nombre y precio.
+
 articulos = soup.find_all('div', class_="prod")
+
 nombre = soup.find_all('div', class_="nom_prod")
 precio = soup.find_all('div', class_="prec_prod_b")
 
