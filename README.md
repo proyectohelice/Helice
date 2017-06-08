@@ -17,6 +17,9 @@ The following programs and libraries are required to run this program:
 
 * xlml - install on mac: pip3 install xlml
 
+* datatime - install on mac: pip3 install datatime
+
+* calendar - install on mac: pip3 install calendar
 
 # Team Work
 ------------------------------------
