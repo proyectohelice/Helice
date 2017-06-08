@@ -7,8 +7,6 @@ import lxml
 from datetime import datetime, date, time, timedelta
 import calendar
 
-
-
 #############################################################
 ########### OBTENCION DE INFORMACION ########################
 
@@ -17,20 +15,20 @@ import calendar
 print("\n")
 if datetime.now().hour <12 and datetime.now().hour>6:
 
-	print("Muy buenos días porfavor selecciona una opcion del siguiente menú:\n")
+	print("Muy buenos días por favor selecciona una opcion del siguiente menú:\n")
 
 elif datetime.now().hour <20 and datetime.now().hour>=12:
 
-	print("Muy buenas tardes porfavor selecciona una opcion del siguiente menú:\n")
+	print("Muy buenas tardes por favor selecciona una opcion del siguiente menú:\n")
 
 elif datetime.now().hour <=6 and datetime.now().hour>=20:
 
-	print("Muy buenas noches porfavor selecciona una opcion del siguiente menú:\n")
+	print("Muy buenas noches por favor selecciona una opcion del siguiente menú:\n")
 
 #  Presentacion de menú al usuario
-print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5 - Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 - Computador\n9 - Ofertas")
+print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5 - Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 - Computador\n9 - Ofertas\n")
 
-consola = input("Por favor ingrese el valor acá:")
+consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 
 
 # Proceso de opcion de menu
@@ -70,8 +68,8 @@ elif consola == '9':
 
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
 else:
-	print("ERROR: Los numeros van entre 1-9")
-	
+	print("\n\n\n############################\nERROR!!!: Los numeros van entre 1-9\n############################\n\n\n")
+
 
 
  
