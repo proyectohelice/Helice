@@ -60,11 +60,18 @@ elif consola == '6':
 
 elif consola == '7':
 
-	url="http://www.weplay.cl/resultado/juegos+pc/1/creacion_mayor/" #Url de juegos pc.
+	url="http://www.weplay.cl/resultado/juegos+ps+vita/1/creacion_mayor/" #Url de juegos pc.
 
 elif consola == '8':
 
+	url="http://www.weplay.cl/resultado/juegos+pc/1/creacion_mayor/" #Url de juegos pc.
+
+elif consola == '9':
+
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
+else:
+	print("ERROR: Los numeros van entre 1-9")
+	
 
 
  
