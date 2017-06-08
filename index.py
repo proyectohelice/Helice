@@ -3,9 +3,10 @@
 
 import requests
 from bs4 import BeautifulSoup
-import lxml
 from datetime import datetime, date, time, timedelta
+import lxml
 import calendar
+import xlwt
 
 #############################################################
 ########### OBTENCION DE INFORMACION ########################
@@ -73,7 +74,7 @@ else:
 
 
  
-# Capturamos el hml de la pagina web y creamos un objeto Response
+# Capturamos el hml de la pagina web
 r  = requests.get(url)
 data = r.text
 
@@ -81,7 +82,7 @@ data = r.text
 # Creamos el objeto soup y le pasamos lo capturado con request
 soup = BeautifulSoup(data, 'lxml')
 
-#Buscar en la pag todos las clases prod.
+#Buscar en la pag todos las clases que contienen nombre y precio.
 articulos = soup.find_all('div', class_="prod")
 nombre = soup.find_all('div', class_="nom_prod")
 precio = soup.find_all('div', class_="prec_prod_b")
@@ -92,13 +93,24 @@ precio = soup.find_all('div', class_="prec_prod_b")
 ########## PROCESAMIENTO DE LA INFORMACION #################
 
 
+#for i in range(0,6*4):
+#	print("--------------------------------------")
+#	print('numero producto:',i+1)
+#	print('-','nombre:', nombre[i].text)
+#	print('-','precio:',precio[i].text)
+
+# Creacion archivo Excel con Solo el primer resultado.
+
+estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
+wb = xlwt.Workbook()
+pestana = wb.add_sheet('PS4',cell_overwrite_ok=True) #Crea pestana
+pestana.write(0, 0, '                       NOMBRE', estilo)
+pestana.write(0, 1, '                       PRECIO', estilo)
+
 for i in range(0,6*4):
-	print("--------------------------------------")
-	print('numero producto:',i+1)
-	print('-','nombre:', nombre[i].text)
-	print('-','precio:',precio[i].text)
-
-
+        pestana.write(i+1, 0, nombre[i].text, estilo)
+        pestana.write(i+1, 1, precio[i].text, estilo)
+wb.save('Weplay.xls')
 
 
 
