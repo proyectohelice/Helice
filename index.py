@@ -68,7 +68,7 @@ elif consola == '9':
 
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
 else:
-	print("\n\n\n############################\nERROR!!!: Los numeros van entre 1-9\n############################\n\n\n")
+	print("\x1b[6;30;42m"+"\n\n\n############################\nERROR: Los numeros van entre 1-9\n############################\n\n\n"+"\x1b[0m")
 
 
 
