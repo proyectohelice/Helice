@@ -10,6 +10,9 @@ import xlwt
 
 #############################################################
 ########### OBTENCION DE INFORMACION ########################
+#Comprobar la conexion de internet
+
+import conexion
 
 #  SALUDO DE BIENVENIDA Y SELECCION DE MENU
 
