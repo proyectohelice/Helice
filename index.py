@@ -11,20 +11,9 @@ import xlwt
 #############################################################
 ########### OBTENCION DE INFORMACION ########################
 
-
 #  SALUDO DE BIENVENIDA Y SELECCION DE MENU
-print("\n")
-if datetime.now().hour <12 and datetime.now().hour>6:
 
-	print("Muy buenos días por favor selecciona una opcion del siguiente menú:\n")
-
-elif datetime.now().hour <20 and datetime.now().hour>=12:
-
-	print("Muy buenas tardes por favor selecciona una opcion del siguiente menú:\n")
-
-elif datetime.now().hour <=6 and datetime.now().hour>=20:
-
-	print("Muy buenas noches por favor selecciona una opcion del siguiente menú:\n")
+import saludo
 
 #  Presentacion de menú al usuario
 print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5 - Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 - Computador\n9 - Ofertas\n")
