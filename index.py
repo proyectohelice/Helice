@@ -12,11 +12,11 @@ import xlwt
 ########### OBTENCION DE INFORMACION ########################
 #Comprobar la conexion de internet
 
-import conexion
+import conexion #llama a la funcion conexion.py para determinar si hay conexion a internet
 
 #  SALUDO DE BIENVENIDA Y SELECCION DE MENU
 
-import saludo
+import saludo #llama a la funcion saludo.py para determinar la hora del dia y saludar correctamente
 
 #  Presentacion de menú al usuario
 print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5 - Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 - Computador\n9 - Ofertas\n")
