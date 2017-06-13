@@ -27,7 +27,7 @@ consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 # Proceso de opcion de menu
 
 if consola == '1': # si consola = 1 se elije consola xbox one
-	url= "http://www.weplay.cl/resultado/juegos+xbox+one/1/creacion_mayor/"  #Url de juegos Xbox one.
+	url= "http://www.weplay.cl/resultado/juegos+xbox+one/1/creacion_mayor/"  #Url de juegos Xbox on
 	name='xbox one'
 
 elif consola == '2':
@@ -76,6 +76,8 @@ else:
 
  
 # Capturamos el hml de la pagina web
+pagina='www.weplay.cl'
+conexion.Prueba_Conexion(pagina)   #Efectua prueba de Conexion a la pagina Web.
 r  = requests.get(url)
 data = r.text
 
@@ -103,18 +105,19 @@ precio = soup.find_all('div', class_="prec_prod_b")
 #	print('-','precio:',precio[i].text)
 
 # Creacion archivo Excel con Solo el primer resultado.
-
+print('Generando archivo Excel de nombre Weplay.xls')
 estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
 wb = xlwt.Workbook()
-pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana
+pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana con nombre de categoria
 pestana.write(0, 0, '                       NOMBRE', estilo)
 pestana.write(0, 1, '                       PRECIO', estilo)
 
-for i in range(0,6*4):
+for i in range(0,6*4):   #Se escriben las celdas excel.
         pestana.write(i+1, 0, nombre[i].text, estilo)
         pestana.write(i+1, 1, precio[i].text, estilo)
-wb.save('Weplay.xls')
 
+wb.save('Weplay.xls') #Se guarda archivo Excel. 
+print('ARCHIVO GENERADO, MUCHAS GRACIAS !')
 
 
 

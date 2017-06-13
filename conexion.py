@@ -1,14 +1,15 @@
 import socket# se importa la funcion socket para comprobar conexion
 
-def IsInternetUp():#funcion que contiene las try o except para mostrar el resultado de la conexion
-    testConn = socket.socket(socket.AF_INET,socket.SOCK_STREAM)#crea un socket INET del tipo STREAM
+def Prueba_Conexion(url):#funcion que contiene las try o except para mostrar el resultado de la conexion
+    prueba = socket.socket(socket.AF_INET,socket.SOCK_STREAM)#crea un socket INET del tipo STREAM
     try:
-        testConn.connect(('http://www.apolinav.cl', 80))#se conecta al servidor web por el puerto 80
-        print ("Estamos on-line. Ya podemos iniciar el programa.")
-        testConn.close()
+        prueba.connect((url, 80))#se conecta al servidor web por el puerto 80
+        print ("Pagina on-line. Iniciando programa.")
+        prueba.close()
     except:
         print ("Lo sentimos, pero no se ha podido establecer la conexión.")
         quit()#en el caso que no exista conexion, la funcion interrumpe el programa
-    testConn.close()
+    prueba.close()
 
-IsInternetUp()#ejecuta la funcion
+
+
