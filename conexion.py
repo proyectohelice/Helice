@@ -4,10 +4,10 @@ def Prueba_Conexion(url):#funcion que contiene las try o except para mostrar el 
     prueba = socket.socket(socket.AF_INET,socket.SOCK_STREAM)#crea un socket INET del tipo STREAM
     try:
         prueba.connect((url, 80))#se conecta al servidor web por el puerto 80
-        print ("Pagina on-line. Iniciando programa.")
+        print ("Página "+"\x1b[0;40;43m"+"on-line."+"\x1b[0m"+" -  Iniciando programa.")
         prueba.close()
     except:
-        print ("Lo sentimos, pero no se ha podido establecer la conexión.")
+        print ("Página "+"\x1b[0;40;41m"+"off-line."+"\x1b[0m"+" -  Verifique su conexión a internet.")
         quit()#en el caso que no exista conexion, la funcion interrumpe el programa
     prueba.close()
 

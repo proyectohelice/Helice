@@ -19,7 +19,9 @@ import conexion #llama a la funcion conexion.py para determinar si hay conexion 
 import saludo #llama a la funcion saludo.py para determinar la hora del dia y saludar correctamente
 
 #  Presentacion de menú al usuario
-print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5 - Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 - Computador\n9 - Ofertas\n")
+print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5"+ 
+	"- Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 "+
+	"- Computador\n9 - Ofertas\n")
 
 consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 
@@ -70,14 +72,18 @@ elif consola == '9':
 	url="http://www.weplay.cl/liquidacion/todo/1/precio_menor" #Url de ofertas.
 	name="Ofertas"
 else:
-	print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" Numero ingresado no encontrado\n############################\n\n\n") 
+	print("\n\n\n############################\n"+"\x1b[0;37;41m"+
+		"ERROR: Numero ingresado no encontrado"+"\x1b[0m"
+		+" \n############################\n\n\n") 
 
 
 
  
-# Capturamos el hml de la pagina web
+
 pagina='www.weplay.cl'
 conexion.Prueba_Conexion(pagina)   #Efectua prueba de Conexion a la pagina Web.
+
+# Capturamos el hml de la pagina web
 r  = requests.get(url)
 data = r.text
 
@@ -87,22 +93,23 @@ soup = BeautifulSoup(data, 'lxml')
 
 #Buscar en la pag todos las clases que contienen nombre y precio.
 
-articulos = soup.find_all('div', class_="prod")
+articulos = soup.find_all('div', class_="prod") # del codigo HTML de la pagina web se toda la clase "prod", 
+												#la que tiene los articulos
 
-nombre = soup.find_all('div', class_="nom_prod")
-precio = soup.find_all('div', class_="prec_prod_b")
+nombre = soup.find_all('div', class_="nom_prod")# del codigo HTML de la pagina web se toma la clase "nom_prod", 
+												#la que tiene el nombre del producto
 
-#############################################################
+
+precio = soup.find_all('div', class_="prec_prod_b")# del codigo HTML de la pagina web se toma la clase "prec_prod_b",
+													# la que contiene el precio del producto
+
+
 
 #############################################################
 ########## PROCESAMIENTO DE LA INFORMACION #################
 
 
-#for i in range(0,6*4):
-#	print("--------------------------------------")
-#	print('numero producto:',i+1)
-#	print('-','nombre:', nombre[i].text)
-#	print('-','precio:',precio[i].text)
+
 
 # Creacion archivo Excel con Solo el primer resultado.
 print('Generando archivo Excel de nombre Weplay.xls')
