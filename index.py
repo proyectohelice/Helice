@@ -129,9 +129,7 @@ if comprobacion == '1':
 	pestana.write(0, 1, '                       PRECIO', estilo)
 
 	for i in range(0,6*4):   #Se escriben las celdas excel.
-
         pestana.write(i+1, 0, nombre[i].text, estilo)
-
         pestana.write(i+1, 1, precio[i].text, estilo)
 
 	wb.save('Weplay.xls') #Se guarda archivo Excel. 
