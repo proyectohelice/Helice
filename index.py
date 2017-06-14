@@ -51,7 +51,8 @@ if comprobacion == '1':
         articulos = soup.find_all('div', class_="prod") # del codigo HTML de la pagina web se toda la clase "prod", 
         nombre = soup.find_all('div', class_="nom_prod")# del codigo HTML de la pagina web se toma la clase "nom_prod", 
         precio = soup.find_all('div', class_="prec_prod_b")# del codigo HTML de la pagina web se toma la clase "prec_prod_b",
-        print('Generando archivo Excel de nombre Weplay.xls')
+        import despedida
+        despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
         wb = xlwt.Workbook()
         pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana con nombre de categoria
@@ -63,7 +64,7 @@ if comprobacion == '1':
                 pestana.write(i+1, 1, precio[i].text, estilo)
 
         wb.save('Weplay.xls') #Se guarda archivo Excel. 
-        print('ARCHIVO GENERADO, MUCHAS GRACIAS !')
+        despedida.termino('adios')
 elif comprobacion == '0':
         print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" \n############################\n\n\n")
 
