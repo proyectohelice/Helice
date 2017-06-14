@@ -51,7 +51,7 @@ if comprobacion == '1':
         articulos = soup.find_all('div', class_="prod") # del codigo HTML de la pagina web se toda la clase "prod", 
         nombre = soup.find_all('div', class_="nom_prod")# del codigo HTML de la pagina web se toma la clase "nom_prod", 
         precio = soup.find_all('div', class_="prec_prod_b")# del codigo HTML de la pagina web se toma la clase "prec_prod_b",
-        import despedida
+        import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
         despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
         wb = xlwt.Workbook()
