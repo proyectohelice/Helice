@@ -51,17 +51,26 @@ if comprobacion == '1':
         articulos = soup.find_all('div', class_="prod") # del codigo HTML de la pagina web se toda la clase "prod", 
         nombre = soup.find_all('div', class_="nom_prod")# del codigo HTML de la pagina web se toma la clase "nom_prod", 
         precio = soup.find_all('div', class_="prec_prod_b")# del codigo HTML de la pagina web se toma la clase "prec_prod_b",
+        for i in range(0,6*4):
+                nombre[i]=nombre[i].text     #Saca cabecera sobrante
+                nombre[i]=nombre[i].strip()  #Elimina los espacios extra
+                precio[i]=precio[i].text
+                precio[i]=precio[i].strip()
+        lista=dict()   #Crea diccionario con lista de juegos
+        for i in range(0,6*4):
+                lista[nombre[i]]=precio[i]
+
         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
         despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
         wb = xlwt.Workbook()
         pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana con nombre de categoria
-        pestana.write(0, 0, '                       NOMBRE', estilo)
-        pestana.write(0, 1, '                       PRECIO', estilo)
+        pestana.write(0, 0, 'NOMBRE', estilo)
+        pestana.write(0, 1, 'PRECIO', estilo)
 
         for i in range(0,6*4):   #Se escriben las celdas excel.
-                pestana.write(i+1, 0, nombre[i].text, estilo)
-                pestana.write(i+1, 1, precio[i].text, estilo)
+                pestana.write(i+1, 0, nombre[i], estilo)
+                pestana.write(i+1, 1, precio[i], estilo)
 
         wb.save('Weplay.xls') #Se guarda archivo Excel. 
         despedida.termino('adios')
