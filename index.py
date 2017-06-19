@@ -67,9 +67,9 @@ if comprobacion == '1':
         print("\n\n¿Le gustaria Guardar los datos en un archivo Excel?\n")
         si_o_no=input("Por favor ingrese '1' para SI y '2' para NO:")
 
+        import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
+        
         if si_o_no == "1":
-
-         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
 
          despedida.termino('excel')
          estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
@@ -84,9 +84,9 @@ if comprobacion == '1':
                 pestana.write(i+1, 1, precio[i], estilo)
 
          wb.save('Weplay.xls') #Se guarda archivo Excel. 
-         despedida.termino('adios')
+         despedida.termino('adios1')
         elif si_o_no == "2":
-         print("")
+         despedida.termino('adios2')
         else:
                 print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" \n############################\n\n\n")
 
