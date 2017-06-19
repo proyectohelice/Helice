@@ -30,9 +30,6 @@ consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 [url,name,comprobacion]=menus.menu(consola) #Funcion de menu
 
 
-	
-
-
 if comprobacion == '1':
         pagina='www.weplay.cl'
         conexion.Prueba_Conexion(pagina)   #Efectua prueba de Conexion a la pagina Web.
@@ -54,9 +51,6 @@ if comprobacion == '1':
                 nombre[i]=nombre[i].strip()  #Elimina los espacios extra
                 precio[i]=precio[i].text
                 precio[i]=precio[i].strip()
-        lista=dict()   #Crea diccionario con lista de juegos
-        for i in range(0,6*4):
-                lista[nombre[i]]=precio[i]
 
         #Creacion de los objetos.
         juego0=Juegos.juegos(name,precio[0],nombre[0])
@@ -114,6 +108,7 @@ if comprobacion == '1':
 
 
         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
+
         despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
         wb = xlwt.Workbook()
