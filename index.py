@@ -7,6 +7,9 @@ from datetime import datetime, date, time, timedelta
 import lxml
 import calendar
 import xlwt
+
+#Importacion clase.
+
 import Juegos
 
 #importacion de Funciones
@@ -17,7 +20,10 @@ import saludo #llama a la funcion saludo.py para determinar la hora del dia y sa
 
 import menus #Llama a la funcion que acciona el menu
 
+import despedida
+
 #  Presentacion de menú al usuario
+
 print("1 - Xbox One\n2 - Play Station 4\n3 - Xbox 360\n4 - Wii\n5"+ 
 	"- Nintendo Switch\n6 - Nintendo 3DS\n7 - Play Station Vita\n8 "+
 	"- Computador\n9 - Ofertas\n")
@@ -66,8 +72,6 @@ if comprobacion == '1':
 
         print("\n\n¿Le gustaria Guardar los datos en un archivo Excel?\n")
         si_o_no=input("Por favor ingrese '1' para SI y '2' para NO:")
-
-        import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
         
         if si_o_no == "1":
 
