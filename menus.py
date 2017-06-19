@@ -39,6 +39,8 @@ def menu(consola):
         comprobacion='1'
     else:
         comprobacion='0'
+        url="no existe"
+        name="no existe"
 
     return url,name,comprobacion
     
