@@ -10,10 +10,10 @@ class juegos:
         self.nombre=nombre
     def Precio(self):
         
-            print(self.precio)
+            print("  -  " + self.precio+"\n--------------------------------------------------------------------------------------------------------------")
 
     def Consola(self):
-            print (self.consola)
+            print ("      "+self.consola,end="    |         ")
      
     def Nombre(self):
-            print (self.nombre)
+            print (self.nombre,end="     ")

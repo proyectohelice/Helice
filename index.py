@@ -84,13 +84,35 @@ if comprobacion == '1':
         juego22=Juegos.juegos(name,precio[22],nombre[22])
         juego23=Juegos.juegos(name,precio[23],nombre[23])
 
-        print("------------------------------------------------------------------")
-        print("       CONSOLA          |       NOMBRE       |        PRECIO      ")
-        print("------------------------------------------------------------------")
-        
-        
+        print("--------------------------------------------------------------------------------------------------------------")
+        print("       CONSOLA     |                           PRECIO y NOMBRE      ")
+        print("--------------------------------------------------------------------------------------------------------------")
+        juego0.Consola();juego0.Nombre();juego0.Precio()
+        juego1.Consola();juego1.Nombre();juego1.Precio()
+        juego2.Consola();juego2.Nombre();juego2.Precio()
+        juego3.Consola();juego3.Nombre();juego3.Precio()
+        juego4.Consola();juego4.Nombre();juego4.Precio()
+        juego5.Consola();juego5.Nombre();juego5.Precio()
+        juego6.Consola();juego6.Nombre();juego6.Precio()
+        juego7.Consola();juego7.Nombre();juego7.Precio()
+        juego8.Consola();juego8.Nombre();juego8.Precio()
+        juego9.Consola();juego9.Nombre();juego9.Precio()
+        juego10.Consola();juego10.Nombre();juego10.Precio()
+        juego11.Consola();juego11.Nombre();juego11.Precio()
+        juego12.Consola();juego12.Nombre();juego12.Precio()
+        juego13.Consola();juego13.Nombre();juego13.Precio()        
+        juego14.Consola();juego14.Nombre();juego14.Precio()
+        juego15.Consola();juego15.Nombre();juego15.Precio()
+        juego16.Consola();juego16.Nombre();juego16.Precio()
+        juego17.Consola();juego17.Nombre();juego17.Precio()
+        juego18.Consola();juego18.Nombre();juego18.Precio()
+        juego19.Consola();juego19.Nombre();juego19.Precio()
+        juego20.Consola();juego20.Nombre();juego20.Precio()
+        juego21.Consola();juego21.Nombre();juego21.Precio()
+        juego22.Consola();juego22.Nombre();juego22.Precio()
+        juego23.Consola();juego23.Nombre();juego23.Precio()
 
-        
+
         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
         despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
