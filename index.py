@@ -30,9 +30,7 @@ consola = input("Por favor ingrese un valor entre 1 - 9 para seleccionar:")
 [url,name,comprobacion]=menus.menu(consola) #Funcion de menu
 
 
-	#print("\n\n\n############################\n"+"\x1b[0;37;41m"+
-	#	"ERROR: Numero ingresado no encontrado"+"\x1b[0m"
-	#	+" \n############################\n\n\n") 
+	
 
 
 if comprobacion == '1':
@@ -61,9 +59,36 @@ if comprobacion == '1':
                 lista[nombre[i]]=precio[i]
 
         #Creacion de los objetos.
-        juego1=Juegos.juegos(name,precio[1],nombre[3])
-        juego2=Juegos.juegos(name,precio[2],nombre[3])
+        juego0=Juegos.juegos(name,precio[0],nombre[0])
+        juego1=Juegos.juegos(name,precio[1],nombre[1])
+        juego2=Juegos.juegos(name,precio[2],nombre[2])
         juego3=Juegos.juegos(name,precio[3],nombre[3])
+        juego4=Juegos.juegos(name,precio[4],nombre[4])
+        juego5=Juegos.juegos(name,precio[5],nombre[5])
+        juego6=Juegos.juegos(name,precio[6],nombre[6])
+        juego7=Juegos.juegos(name,precio[7],nombre[7])
+        juego8=Juegos.juegos(name,precio[8],nombre[8])
+        juego9=Juegos.juegos(name,precio[9],nombre[9])
+        juego10=Juegos.juegos(name,precio[10],nombre[10])
+        juego11=Juegos.juegos(name,precio[11],nombre[11])
+        juego12=Juegos.juegos(name,precio[12],nombre[12])
+        juego13=Juegos.juegos(name,precio[13],nombre[13])
+        juego14=Juegos.juegos(name,precio[14],nombre[14])
+        juego15=Juegos.juegos(name,precio[15],nombre[15])
+        juego16=Juegos.juegos(name,precio[16],nombre[16])
+        juego17=Juegos.juegos(name,precio[17],nombre[17])
+        juego18=Juegos.juegos(name,precio[18],nombre[18])
+        juego19=Juegos.juegos(name,precio[19],nombre[19])
+        juego20=Juegos.juegos(name,precio[20],nombre[20])
+        juego21=Juegos.juegos(name,precio[21],nombre[21])
+        juego22=Juegos.juegos(name,precio[22],nombre[22])
+        juego23=Juegos.juegos(name,precio[23],nombre[23])
+
+        print("------------------------------------------------------------------")
+        print("       CONSOLA          |       NOMBRE       |        PRECIO      ")
+        print("------------------------------------------------------------------")
+        print(consola) juego23.Nombre()
+        
 
         
         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
@@ -81,6 +106,7 @@ if comprobacion == '1':
 
         wb.save('Weplay.xls') #Se guarda archivo Excel. 
         despedida.termino('adios')
+
 elif comprobacion == '0':
         print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" \n############################\n\n\n")
 
