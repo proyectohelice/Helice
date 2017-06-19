@@ -106,23 +106,31 @@ if comprobacion == '1':
         juego22.Consola();juego22.Nombre();juego22.Precio()
         juego23.Consola();juego23.Nombre();juego23.Precio()
 
+        print("\n\n¿Te gustaria Guardiar los datos en un archivo compatible con excel?\n")
+        si_o_no=input("Por favor ingrese '1' para SI y '2' para NO:")
 
-        import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
+        if si_o_no == "1":
 
-        despedida.termino('excel')
-        estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
-        wb = xlwt.Workbook()
-        pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana con nombre de categoria
-        pestana.write(0, 0, 'NOMBRE', estilo)
-        pestana.write(0, 1, 'PRECIO', estilo)
+         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
+
+         despedida.termino('excel')
+         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
+         wb = xlwt.Workbook()
+         pestana = wb.add_sheet(name,cell_overwrite_ok=True) #Crea pestana con nombre de categoria
+         pestana.write(0, 0, 'NOMBRE', estilo)
+         pestana.write(0, 1, 'PRECIO', estilo)
 
         
-        for i in range(0,6*4):   #Se escriben las celdas excel.
+         for i in range(0,6*4):   #Se escriben las celdas excel.
                 pestana.write(i+1, 0, nombre[i], estilo)
                 pestana.write(i+1, 1, precio[i], estilo)
 
-        wb.save('Weplay.xls') #Se guarda archivo Excel. 
-        despedida.termino('adios')
+         wb.save('Weplay.xls') #Se guarda archivo Excel. 
+         despedida.termino('adios')
+        elif si_o_no == "2":
+         print("")
+        else:
+                print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" \n############################\n\n\n")
 
 elif comprobacion == '0':
         print("\n\n\n############################\n"+"\x1b[0;37;41m"+"ERROR: Numero ingresado no encontrado"+"\x1b[0m"+" \n############################\n\n\n")
