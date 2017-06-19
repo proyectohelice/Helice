@@ -106,7 +106,7 @@ if comprobacion == '1':
         juego22.Consola();juego22.Nombre();juego22.Precio()
         juego23.Consola();juego23.Nombre();juego23.Precio()
 
-        print("\n\n¿Te gustaria Guardiar los datos en un archivo compatible con excel?\n")
+        print("\n\n¿Le gustaria Guardar los datos en un archivo Excel?\n")
         si_o_no=input("Por favor ingrese '1' para SI y '2' para NO:")
 
         if si_o_no == "1":
