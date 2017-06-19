@@ -7,7 +7,7 @@ from datetime import datetime, date, time, timedelta
 import lxml
 import calendar
 import xlwt
-
+import Juegos
 
 #importacion de Funciones
 
@@ -60,6 +60,12 @@ if comprobacion == '1':
         for i in range(0,6*4):
                 lista[nombre[i]]=precio[i]
 
+        #Creacion de los objetos.
+        juego1=Juegos.juegos(name,precio[1],nombre[3])
+        juego2=Juegos.juegos(name,precio[2],nombre[3])
+        juego3=Juegos.juegos(name,precio[3],nombre[3])
+
+        
         import despedida#ejecuta la funcion para indicar el guardado de lo solicitado y termino con despedida
         despedida.termino('excel')
         estilo= xlwt.easyxf('font: name Times New Roman, colour black, bold on')
@@ -68,6 +74,7 @@ if comprobacion == '1':
         pestana.write(0, 0, 'NOMBRE', estilo)
         pestana.write(0, 1, 'PRECIO', estilo)
 
+        
         for i in range(0,6*4):   #Se escriben las celdas excel.
                 pestana.write(i+1, 0, nombre[i], estilo)
                 pestana.write(i+1, 1, precio[i], estilo)
